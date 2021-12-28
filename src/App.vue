@@ -8,9 +8,10 @@
       >
         <v-list-item 
         class="px-2" link
+        to="/"
         >
           <v-list-item-avatar>
-            <v-img src="https://randomuser.me/api/portraits/men/85.jpg"></v-img>
+            <v-img src="fwTVrf0Qt5E.jpg"></v-img>
           </v-list-item-avatar>
   
           <v-list-item-title>Кадыров Денис</v-list-item-title>
@@ -36,7 +37,9 @@
             <v-list-item
               v-for="(item, i) in items"
               :key="i"
+              :to="item.link"
             >
+            
               <v-list-item-icon>
                 <v-icon v-text="item.icon"></v-icon>
               </v-list-item-icon>
@@ -69,7 +72,10 @@
     </v-app-bar>
 
     <v-main>
-      <v-container>
+          <router-view></router-view>
+
+      
+      <!-- <v-container>
 
         <v-row>
           <v-col
@@ -85,7 +91,7 @@
             ></v-card>
           </v-col>
         </v-row>
-      </v-container>
+      </v-container> -->
     </v-main>
   </v-app>
 </template>
@@ -103,9 +109,12 @@ export default {
   data: () => ({
      drawer: true,
       items: [
-        { title: 'Слайдер', icon: 'mdi-image-multiple' },
-        { title: 'Калькулятор', icon: 'mdi-calculator' },
-        { title: 'Задание 1', icon: 'mdi-checkbox-blank-badge-outline' },
+        { title: '1.Слайдер', icon: 'mdi-image-multiple', link: '/slider' },
+        { title: '2. Калькулятор', icon: 'mdi-calculator' , link: '/calculator'},
+        { title: '3. Обмен', icon: 'mdi-swap-horizontal-bold' , link: '/move'},
+        { title: '4. Карусель', icon: 'mdi-sync' , link: '/carousel'},
+        { title: '5. Магазин', icon: 'mdi-cart', link: '/store'},
+        { title: '6. Тест', icon: 'mdi-checkbox-blank-badge-outline' , link: '/test'},
       ],
       mini:  false,
   }),
