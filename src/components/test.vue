@@ -107,7 +107,9 @@
                 Ответить
             </v-btn>
     
-            <v-btn text>
+            <v-btn
+                @click="e1 = 1"
+            >
                 Назад
             </v-btn>
             </v-stepper-content>
@@ -143,7 +145,7 @@
                 Ответить
             </v-btn>
     
-            <v-btn text  @click="e1 = 3">
+            <v-btn text  @click="e1 = 2">
                 Назад
             </v-btn>
             </v-stepper-content>
@@ -181,7 +183,9 @@
                 Ответить
             </v-btn>
     
-            <v-btn text>
+                <v-btn
+                @click="e1 = 3"
+            >
                 Назад
             </v-btn>
             </v-stepper-content>
@@ -227,7 +231,9 @@
                 Закончить
             </v-btn>
     
-            <v-btn text>
+                <v-btn
+                @click="e1 = 4"
+            >
                 Назад
             </v-btn>
             </v-stepper-content>
